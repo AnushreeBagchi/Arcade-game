@@ -1,3 +1,29 @@
 body {
     text-align: center;
 }
+
+.heading{
+    font-size: 5em;
+    color:green;
+}
+.score{
+    font-size: 3em;
+    color:green;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
+
+.button{
+    font-size: 2em;
+    background-color: lightgreen;
+    margin: 0.5em;
+    border-radius: 0.25em;
+    border-color: green;
+    color: green
+
+}

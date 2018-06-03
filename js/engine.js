@@ -79,8 +79,18 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
     }
+    function checkCollisions(){
+        //console.log(player.x, player.y);
+        var  distance1 =Math.sqrt(Math.pow(player.x-enemy.x,2)+Math.pow(player.y-enemy.y,2));
+        var  distance2 =Math.sqrt(Math.pow(player.x-enemy2.x,2)+Math.pow(player.y-enemy2.y,2));
+        var  distance3 =Math.sqrt(Math.pow(player.x-enemy3.x,2)+Math.pow(player.y-enemy3.y,2));
+        if (distance1<50||distance2<50||distance3<50)
+        {
+            player.y=400;
+        }
+    };
 
     /* This is called by the update function and loops through all of the
      * objects within your allEnemies array as defined in app.js and calls
@@ -146,6 +156,7 @@ var Engine = (function(global) {
      * on your enemy and player entities within app.js
      */
     function renderEntities() {
+        
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
