@@ -6,17 +6,40 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="heading">Arcade Game</div>
-    <div class="score">Score:</div>
-    
-    <br>
-    <script src="js/resources.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/engine.js"></script>
-    <br>
-    <div class="footer"></div>
-        <button class= "button">Reset</button>
-        <button  class= "button">Choose Player</button>
+    <div class="game">
+        <div class="heading">Arcade Game</div>
+        <div class="score">
+            Score: <div class="scoreCount"> 0 </div>
+        </div>
+        
+        <br>
+        <script src="js/resources.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/engine.js"></script>
+        
+        
+        <br>
+        <div class="footer"></div>
+            <button class= "reset button">Reset</button>
+            <button class= "choosePlayer button">Choose Player</button>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script src="js/additionalFeature.js"></script>
+        
+
+    </div>
+    <div class="playerList hide">
+        <div id="c1"> <img src="images/char-boy.png"/> <p class="characters"> Boy </p>    </div> 
+        <div id="c2" > <img src="images/char-cat-girl.png"/> <p class="characters"> Cat Girl </p>    </div> 
+        <div id="c3"> <img src="images/char-horn-girl.png"/> <p class="characters"> Horn Girl </p>    </div>         
+        <div id="c4"> <img src="images/char-pink-girl.png"/> <p class="characters"> Pink Girl </p>    </div> 
+        <div id="c5"> <img src="images/char-princess-girl.png"/> <p class="characters"> Princess Girl </p>    </div> 
+      
     </div>
 </body>
 </html>
+

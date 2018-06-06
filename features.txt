@@ -1,0 +1,7 @@
+1) Win page
+2)remove canvas when clicking on choose player
+2) select player functionality
+3) Score -- done
+4) Game start page
+5) Gems
+

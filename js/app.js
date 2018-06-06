@@ -38,16 +38,17 @@ var Player=function(){
     this.sprite='images/char-boy.png';
     this.x=200;
     this.y=400;
-    
+    this.scoreCount=0;     
 };
 Player.prototype.update=function(dt){
-
+    $(".scoreCount").text(this.scoreCount);
+    
     
 }
 Player.prototype.render=function(){
     ctx.drawImage(Resources.get(this.sprite),this.x, this.y); 
 };
-Player.prototype.handleInput=function(movement){
+Player.prototype.handleInput=function(movement){   
   if(movement==='up'&&this.y>0)
   {
     this.y=this.y-85;
@@ -64,7 +65,11 @@ Player.prototype.handleInput=function(movement){
   {
       this.x=this.x+100;
   }
-
+  if(this.y<10)
+  {
+      $(".game").append("<div class='win'>Congrats you won!!</div>");
+      this.scoreCount++;     
+  }
 };
 
 

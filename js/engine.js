@@ -89,6 +89,9 @@ var Engine = (function(global) {
         if (distance1<50||distance2<50||distance3<50)
         {
             player.y=400;
+            player.x=200;
+            player.scoreCount=0;
+            $(".scoreCount").text(this.scoreCount);
         }
     };
 
