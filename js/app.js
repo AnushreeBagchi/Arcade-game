@@ -67,8 +67,9 @@ Player.prototype.handleInput=function(movement){
   }
   if(this.y<10)
   {
-      $(".game").append("<div class='win'>Congrats you won!!</div>");
-      this.scoreCount++;     
+      //$(".game").append("<div class='win'>Congrats you won!!</div>");
+       
+      win();    
   }
 };
 
