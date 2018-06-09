@@ -1,6 +1,8 @@
 $("canvas").addClass("hide")
 
 function gamePageStart(){
+    player.x=200;
+    player.x=200;
     $("canvas").toggleClass("hide")
     $(".playerList").toggleClass("hide")
     $(".reset").toggleClass("hide")
@@ -10,6 +12,7 @@ function gamePageStart(){
 
 // Reset functionality
 $(".reset").on("click",function (){
+    
     gamePageStart();
    
 });

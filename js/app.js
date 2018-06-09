@@ -1,5 +1,5 @@
 // Enemies our player must avoid
-var Enemy = function(x,y) {
+var Enemy = function(x,y,speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
@@ -9,6 +9,7 @@ var Enemy = function(x,y) {
     this.x=x;
     this.y=y; 
     this.start=this.x;
+    this.speed=speed;
 };
 
 // Update the enemy's position, required method for game
@@ -18,7 +19,7 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
 
-    this.x=this.x+2+dt;
+    this.x=this.x+this.speed+dt;
     if (this.x>500)
     {
         this.x=this.start;
@@ -42,36 +43,54 @@ var Player=function(){
 };
 Player.prototype.update=function(dt){
     $(".scoreCount").text(this.scoreCount);
-    
-    
+    this.checkCollisions= function(){
+        var  distance1 =Math.sqrt(Math.pow(player.x-enemy.x,2)+Math.pow(player.y-enemy.y,2));
+        var  distance2 =Math.sqrt(Math.pow(player.x-enemy2.x,2)+Math.pow(player.y-enemy2.y,2));
+        var  distance3 =Math.sqrt(Math.pow(player.x-enemy3.x,2)+Math.pow(player.y-enemy3.y,2));
+        var  distance4 =Math.sqrt(Math.pow(player.x-enemy4.x,2)+Math.pow(player.y-enemy4.y,2));
+        if (distance1<50||distance2<50||distance3<50||distance4<50)
+        {
+            this.y=400;
+            this.x=200;
+            this.scoreCount=0;
+            $(".scoreCount").text(this.scoreCount);
+        }
+    };    
 }
 Player.prototype.render=function(){
     ctx.drawImage(Resources.get(this.sprite),this.x, this.y); 
 };
 Player.prototype.handleInput=function(movement){   
-  if(movement==='up'&&this.y>0)
-  {
-    this.y=this.y-85;
-  }
-  else if(this.y<400 && movement==='down')
-  {
-    this.y=this.y+85;
-  }
-  else if (this.x>0 && movement==='left')
-  {
-      this.x=this.x-100;
-  }
-  else if (this.x<400 && movement==='right')
-  {
-      this.x=this.x+100;
-  }
-  if(this.y<10)
-  {
-      //$(".game").append("<div class='win'>Congrats you won!!</div>");
-       
-      win();    
-  }
-};
+        switch (movement)
+        {
+            case 'up':
+                if(  this.y>0)
+                {  
+                    this.y=this.y-85;
+                }
+                break;
+            case 'down':
+                if(this.y<400){
+                    this.y=this.y+85;
+                }
+                 break;
+            case 'left':
+                if (this.x>0){
+                    this.x=this.x-100;
+                }
+                break;
+            case 'right':
+                if (this.x<400 ){
+                    this.x=this.x+100;
+                }
+                break;               
+    };
+    if(this.y<10)
+       {
+           //$(".game").append("<div class='win'>Congrats you won!!</div>");
+           win();    
+       }
+}
 
 
 // Now instantiate your objects.
@@ -79,10 +98,11 @@ Player.prototype.handleInput=function(movement){
 // Place the player object in a variable called player
 
 var player= new Player();
-var enemy= new Enemy(-100,65);
-var enemy2= new Enemy(-250,150);
-var enemy3= new Enemy(-600,230);
-var allEnemies=[enemy,enemy2,enemy3];
+var enemy= new Enemy(-100,65,4);
+var enemy2= new Enemy(-250,150,2);
+var enemy3= new Enemy(-600,230,5);
+var enemy4= new Enemy(-250,150,6);
+var allEnemies=[enemy,enemy2,enemy3,enemy4];
 
 
 // This listens for key presses and sends the keys to your

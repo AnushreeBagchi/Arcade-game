@@ -79,22 +79,8 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        checkCollisions();
+        player.checkCollisions();
     }
-    function checkCollisions(){
-        //console.log(player.x, player.y);
-        var  distance1 =Math.sqrt(Math.pow(player.x-enemy.x,2)+Math.pow(player.y-enemy.y,2));
-        var  distance2 =Math.sqrt(Math.pow(player.x-enemy2.x,2)+Math.pow(player.y-enemy2.y,2));
-        var  distance3 =Math.sqrt(Math.pow(player.x-enemy3.x,2)+Math.pow(player.y-enemy3.y,2));
-        if (distance1<50||distance2<50||distance3<50)
-        {
-            player.y=400;
-            player.x=200;
-            player.scoreCount=0;
-            $(".scoreCount").text(this.scoreCount);
-        }
-    };
-
     /* This is called by the update function and loops through all of the
      * objects within your allEnemies array as defined in app.js and calls
      * their update() methods. It will then call the update function for your
