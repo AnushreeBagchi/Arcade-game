@@ -163,6 +163,7 @@ var Engine = (function(global) {
      */
     function reset() {
         // noop
+        gamePageStart();
     }
 
     /* Go ahead and load all of the images we know we're going to need to

@@ -3,6 +3,7 @@ $("canvas").addClass("hide")
 function gamePageStart(){
     player.x=200;
     player.x=200;
+    player.scoreCount=0;
     $("canvas").toggleClass("hide")
     $(".playerList").toggleClass("hide")
     $(".reset").toggleClass("hide")
