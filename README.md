@@ -1,18 +1,21 @@
-frontend-nanodegree-arcade-game
-===============================
+# frontend-nanodegree-arcade-game
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+### This is a part of Udacity front end Nanodegree learning [Udacity Front End Developer Nanodegree](https://in.udacity.com/course/front-end-web-developer-nanodegree--nd001) 
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
-
-How to get started:
+#### Installation:
 1. Clone the project from Git Hub and create a folder with images, css  , html and js file.
 2. Open the index.html file in browser.
 
-How to play the game:
-1. Click in Choose Player button.
-2. Select any player from the list  and click on the  player.
-3. The canvas is displayed on the screen. Use  up, left,down,right key to navigate. 
-4. When the player reaches water, the score is incremented by 1.
-5. If the player collides with any of the enemy, the score is reset to 0.
-6. Click on reset button to play from beginning by selecting a new player.
+In this game you have a Player and Enemies (Bugs). The goal of the player is to reach the water, without colliding into any one of the enemies. The player can move left, right, up and down. The enemies move in varying speeds on the paved block portion of the scene. Once a the player collides with an enemy, the game is reset and the player moves back to the start square. Once the player reaches the water the game is won and the score increments.
+
+![alt text](https://media.giphy.com/media/YBJO90KgmrSuKRRdZk/giphy.gif "Image of the project")
+
+#### How to play the game:
+- Click in Choose Player button.
+- Select any player from the list  and click on the  player.
+- The canvas is displayed on the screen. Use  up, left,down,right key to navigate. 
+- When the player reaches water, the score is incremented by 1.
+- If the player collides with any of the enemy, the score is reset to 0.
+- Click on reset button to play from beginning by selecting a new player.
+
+Give it a try [ https://anushreebagchi.github.io/Arcade-game/]( https://anushreebagchi.github.io/Arcade-game/)
