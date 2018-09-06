@@ -3,11 +3,11 @@ body {
 }
 
 .heading{
-    font-size: 5em;
+    font-size: 3em;
     color:green;
 }
 .score{
-    font-size: 3em;
+    font-size: 1em;
     color:green;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@ body {
 }
 
 .button{
-    font-size: 2em;
+    font-size: 1em;
     background-color: lightgreen;
     margin: 0.5em;
     border-radius: 0.25em;
@@ -37,17 +37,17 @@ body {
 }
 
 img{
-    margin: 6em;
+    margin: 2em;
     margin-bottom: -2.5em;
 }
 
 .characters{
-    font-size: 2em;
+    font-size: 1em;
     color: green;
 }
 
 .win{
-    font-size: 3em;
+    font-size: 2em;
     color: green;
 }
 .hide{
