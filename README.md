@@ -18,4 +18,4 @@ In this game you have a Player and Enemies (Bugs). The goal of the player is to 
 - If the player collides with any of the enemy, the score is reset to 0.
 - Click on reset button to play from beginning by selecting a new player.
 
-Give it a try [ https://anushreebagchi.github.io/Arcade-game/]( https://anushreebagchi.github.io/Arcade-game/)
+Give it a try [ https://anushree.tech/Arcade-game/]( https://anushree.tech/Arcade-game/)
